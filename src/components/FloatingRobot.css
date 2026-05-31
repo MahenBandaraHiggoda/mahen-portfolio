@@ -1,0 +1,53 @@
+.floating-robot {
+  position: fixed;
+  right: 8vw;
+  bottom: 11vh;
+  z-index: 5;
+  width: clamp(92px, 12vw, 170px);
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 18px 28px rgba(0, 191, 255, .2));
+  animation: robotFloat 16s ease-in-out infinite;
+}
+
+@keyframes robotFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-4deg);
+  }
+
+  20% {
+    transform: translate3d(-8vw, -9vh, 0) rotate(5deg);
+  }
+
+  45% {
+    transform: translate3d(-2vw, -18vh, 0) rotate(-2deg);
+  }
+
+  70% {
+    transform: translate3d(5vw, -7vh, 0) rotate(6deg);
+  }
+}
+
+@media (max-width: 860px) {
+  .floating-robot {
+    right: 5vw;
+    bottom: 14vh;
+    width: clamp(72px, 18vw, 110px);
+    animation-duration: 13s;
+  }
+}
+
+@media (max-width: 520px) {
+  .floating-robot {
+    right: 12px;
+    bottom: 86px;
+    width: 68px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-robot {
+    animation: none;
+  }
+}

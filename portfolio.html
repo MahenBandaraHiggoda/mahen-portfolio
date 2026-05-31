@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Mahen D Higgoda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-card inner-page" aria-label="Projects">
+      <header class="navbar">
+        <a class="brand" href="index.html">Mahen.</a>
+
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="skills.html">Skills</a>
+          <a class="active" href="portfolio.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <div class="page-content">
+        <p class="eyebrow">Projects</p>
+        <h1>Selected software projects.</h1>
+        <div class="card-grid portfolio-grid">
+          <article class="project-card gallery-card" role="button" tabindex="0" data-gallery="inventory" aria-label="Open Inventory Management System image gallery">
+            <div class="project-preview inventory-preview" role="img" aria-label="Inventory Management System screenshot"></div>
+            <h2>Inventory Management System</h2>
+            <p>A desktop management system for tracking records, handling CRUD operations, and organizing inventory data efficiently.</p>
+          </article>
+          <article class="project-card gallery-card" role="button" tabindex="0" data-gallery="farm2market" aria-label="Open Farm2Market image gallery">
+            <div class="project-preview farm2market-preview" role="img" aria-label="Farm2Market Mobile App screenshot"></div>
+            <h2>Farm2Market Mobile App</h2>
+            <p>An Android mobile app concept with clean screens, simple navigation, and practical flows for connecting farm products with buyers.</p>
+          </article>
+          <article class="project-card video-card" role="button" tabindex="0" data-video="images/Record_2026_05_30_22_02_17_766 - Trim.mp4" aria-label="Open LittleStars project video">
+            <video class="project-preview project-preview-video" src="images/Record_2026_05_30_22_02_17_766 - Trim.mp4" autoplay loop muted playsinline preload="metadata" aria-label="LittleStars project preview"></video>
+            <h2>Full-Stack Autistic Child Learning and Development Platform</h2>
+            <p>LittleStars is a full-stack web application designed to support autistic children's learning and development through interactive educational tools.</p>
+          </article>
+          <article class="project-card video-card" role="button" tabindex="0" data-video="images/Record_2026_05_31_11_35_35_556 - Trim.mp4" aria-label="Open Student Help Desk project video">
+            <video class="project-preview project-preview-video" src="images/Record_2026_05_31_11_35_35_556 - Trim.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Student Help Desk project preview"></video>
+            <h2>Student Help Desk Web Application (LMS)</h2>
+            <p>Developed a MERN-based student support platform with modules for help desk ticketing, study materials, past papers, events, sports, clubs, AI chat, course management, internships, and company-student communication. Built separate client, admin, and backend applications using React, Vite, Node.js, Express, MongoDB, and REST APIs.</p>
+          </article>
+          <article class="project-card">
+            <div class="project-preview vivid"></div>
+            <h2>AI Learning Projects</h2>
+            <p>Python-based AI and Machine Learning experiments focused on data analysis, model training, and real-world problem solving.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Project screenshots">
+      <button class="lightbox-close" type="button" aria-label="Close gallery">X</button>
+      <button class="lightbox-control lightbox-prev" type="button" aria-label="Previous image">&lt;</button>
+      <figure class="lightbox-frame">
+        <img class="lightbox-image" src="images/farm2market.png" alt="Farm2Market app screenshot">
+        <video class="lightbox-video" controls playsinline aria-label="Project video"></video>
+      </figure>
+      <button class="lightbox-control lightbox-next" type="button" aria-label="Next image">&gt;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
