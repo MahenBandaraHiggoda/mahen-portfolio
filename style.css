@@ -550,6 +550,19 @@ h2 {
   }
 }
 
+@keyframes mobileOrbFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: .55;
+  }
+
+  50% {
+    transform: translate3d(-10px, -14px, 0) scale(1.06);
+    opacity: .9;
+  }
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -1210,6 +1223,10 @@ body.modal-open {
     display: none;
   }
 
+  .home-animation {
+    display: block;
+  }
+
   .skill-chip {
     font-size: 11px;
     padding: 6px 11px;
@@ -1346,7 +1363,64 @@ body.modal-open {
 }
 
 @media (max-width: 520px) {
+  .home-hero .home-animation {
+    z-index: 4;
+  }
+
+  .home-hero .home-animation::before,
+  .home-hero .home-animation::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .home-hero .home-animation::before {
+    right: 18px;
+    top: 24%;
+    width: 86px;
+    height: 86px;
+    border: 1px solid rgba(0, 191, 255, .24);
+    background: radial-gradient(circle, rgba(0, 191, 255, .12), transparent 68%);
+    animation: mobileOrbFloat 7s ease-in-out infinite;
+  }
+
+  .home-hero .home-animation::after {
+    left: 20px;
+    bottom: 22%;
+    width: 54px;
+    height: 54px;
+    background: radial-gradient(circle, rgba(0, 191, 255, .18), transparent 70%);
+    animation: mobileOrbFloat 6s ease-in-out infinite reverse;
+  }
+
   .skill-chip {
+    display: inline-flex;
+    align-items: center;
+    font-size: 10px;
+    padding: 5px 9px;
+    opacity: .9;
+    z-index: 5;
+  }
+
+  .chip-react {
+    left: 6%;
+    top: 30%;
+  }
+
+  .chip-node {
+    right: 5%;
+    top: 35%;
+  }
+
+  .chip-ai {
+    left: 8%;
+    bottom: 19%;
+  }
+
+  .chip-mongo,
+  .chip-api {
     display: none;
   }
 
@@ -1458,7 +1532,9 @@ body.modal-open {
   .home-animation::after,
   .skill-chip,
   .code-line,
-  .floating-robot {
+  .floating-robot,
+  .home-hero .home-animation::before,
+  .home-hero .home-animation::after {
     animation: none;
   }
 
